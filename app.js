@@ -16,9 +16,6 @@ io.on('connection', function (socket) {
     console.log("Button get location clicked!");
     makeLocationRequest();
   });
-  //socket.on('accelData', function (data) {
-    //console.log(data);
-  //});
 });
 
 function makeLocationRequest() {
@@ -30,14 +27,6 @@ function makeLocationRequest() {
     }
   });
 }
-
-//request('http://ip-api.com/json/?fields=8401', function (error, response, body) {
-//  if (!error && response.statusCode == 200) {
-//    console.log(body) // print location to console
-//    var locationData = body
-//    io.emit('locationEvent', locationData);
-//  }
-//});
 
 app.post('/location', function(req, res) {
   locationData = req.body
